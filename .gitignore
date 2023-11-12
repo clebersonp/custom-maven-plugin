@@ -1,0 +1,13 @@
+# User-specific stuff
+*/.gitignore
+*/.idea/.gitignore
+*/.idea/encodings.xml
+*/.idea/misc.xml
+*/.idea/uiDesigner.xml
+*/.idea/vcs.xml
+*/out/production/use-hello-maven-plugin/sample/plugin/Main.class
+*/target
+.project
+*/.project
+.classpath
+*/.classpath
