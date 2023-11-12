@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>sample.plugin</groupId>
+  <artifactId>use-hello-maven-plugin</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>sample.plugin</groupId>
+        <artifactId>hello-maven-plugin</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <configuration>
+          <!-- or via CMD: -Dsayhi.greeting=Welcome -Dsayhi.options=TWO,THREE -->
+<!--          <greeting>Welcome</greeting>-->
+<!--          <options>-->
+<!--            <option>TWO</option>-->
+<!--            <option>THREE</option>-->
+<!--          </options>-->
+        </configuration>
+        <executions>
+          <execution>
+            <!-- This causes the simple mojo to be executed whenever Java code is compiled -->
+            <phase>compile</phase>
+            <goals>
+              <goal>sayhi</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
